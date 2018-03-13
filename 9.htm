@@ -1,0 +1,1114 @@
+<div id="container">
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="sogou_site_verification" content="xSIboraCiG"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="数据库,封装,面向对象,sqlite"/>
+    <meta name="description" content="一段代码，一个故事"/>
+    <link rel="shortcut icon" href="favicon.png" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/img/favicon.png"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/img/apple-touch-icon.png"/>
+    <script src="main.js" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/js/main.js"></script>
+    <link href="style.min.css" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/css/style.min.css" rel="stylesheet">
+    <link href="prism.css" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/css/prism.css" rel="stylesheet">
+    <title>#2018-02-21# 数据库面向对象封装[干货] - petterObam</title>
+    <script src="particles.min.js" tppabs="http://cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body  gtools_scp_screen_capture_injected="true">
+<!--[if lt IE 8]>
+<div class="browsehappy" role="dialog">
+    当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="javascript:if(confirm(%27http://browsehappy.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://browsehappy.com/%27" tppabs="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
+</div>
+<![endif]-->
+<div class="left-col">
+    <div class="overlay"></div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="index.htm" tppabs="http://www.oyjie.cn/" class="profilepic">
+                <img src="logo.png.jpg" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/img/logo.png" class="js-avatar">
+            </a>
+            <hgroup>
+                <h1 class="header-author"><a href="index.htm" tppabs="http://www.oyjie.cn/">petterObam</a></h1>
+                <p class="subtitle">一段代码，一个故事</p>
+            </hgroup>
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="index.htm" tppabs="http://www.oyjie.cn/">主页</a></li>
+                </ul>
+            </nav>
+            <nav class="header-smart-menu">
+                <a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+                <a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+                <a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+                <a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+
+
+                    <a class="social rss" target="blank" href="feed.htm" tppabs="http://www.oyjie.cn/feed">RSS</a>
+
+                    <!---->
+                    <a class="github" target="blank"
+                       href="javascript:if(confirm(%27https://github.com/petterobam  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/petterobam%27" tppabs="https://github.com/petterobam">Github</a>
+                    
+
+                </div>
+            </nav>
+        </header>
+    </div>
+</div>
+<div class="tools-col">
+    <ul class="btn-wrap">
+        <li class="" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+        <li data-hook="tools-section-tag" class="chose"><span class="text"></span><i class="icon-price-tags"></i></li>
+        <li data-hook="tools-section-friends" class=""><span class="text">友链</span><i class="icon-link"></i></li>
+        <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    </ul>
+    <div class="tools-wrap">
+        <section class="tools-section tools-section-all">
+
+        </section>
+        <section class="tools-section tools-section-tag chose">
+            <div class="widget tagcloud" id="js-tagcloud">
+                <a href="PDF.htm" tppabs="http://www.oyjie.cn/tag/PDF" style="font-size: 12px;" class="color3">PDF</a>
+                <a href="CentOs.htm" tppabs="http://www.oyjie.cn/tag/CentOs" style="font-size: 12px;" class="color3">CentOs</a>
+                <a href="sqlite.htm" tppabs="http://www.oyjie.cn/tag/sqlite" style="font-size: 12px;" class="color3">sqlite</a>
+                <a href="面向对象.htm" tppabs="http://www.oyjie.cn/tag/面向对象" style="font-size: 12px;" class="color3">面向对象</a>
+                <a href="封装.htm" tppabs="http://www.oyjie.cn/tag/封装" style="font-size: 12px;" class="color3">封装</a>
+                <a href="数据库.htm" tppabs="http://www.oyjie.cn/tag/数据库" style="font-size: 12px;" class="color3">数据库</a>
+                <a href="打包.htm" tppabs="http://www.oyjie.cn/tag/打包" style="font-size: 12px;" class="color3">打包</a>
+                <a href="代码合并.htm" tppabs="http://www.oyjie.cn/tag/代码合并" style="font-size: 12px;" class="color3">代码合并</a>
+                <a href="代码提交.htm" tppabs="http://www.oyjie.cn/tag/代码提交" style="font-size: 12px;" class="color3">代码提交</a>
+                <a href="文本分析.htm" tppabs="http://www.oyjie.cn/tag/文本分析" style="font-size: 12px;" class="color3">文本分析</a>
+                <a href="聚类.htm" tppabs="http://www.oyjie.cn/tag/聚类" style="font-size: 12px;" class="color3">聚类</a>
+                <a href="分词.htm" tppabs="http://www.oyjie.cn/tag/分词" style="font-size: 12px;" class="color3">分词</a>
+                <a href="WORD.htm" tppabs="http://www.oyjie.cn/tag/WORD" style="font-size: 12px;" class="color3">WORD</a>
+                <a href="数据提取.htm" tppabs="http://www.oyjie.cn/tag/数据提取" style="font-size: 12px;" class="color3">数据提取</a>
+                <a href="解析.htm" tppabs="http://www.oyjie.cn/tag/解析" style="font-size: 12px;" class="color3">解析</a>
+                <a href="Word-1.htm" tppabs="http://www.oyjie.cn/tag/Word" style="font-size: 12px;" class="color3">Word</a>
+                <a href="Tale.htm" tppabs="http://www.oyjie.cn/tag/Tale" style="font-size: 12px;" class="color3">Tale</a>
+                <a href="项目经理.htm" tppabs="http://www.oyjie.cn/tag/项目经理" style="font-size: 12px;" class="color3">项目经理</a>
+                <a href="项目管控.htm" tppabs="http://www.oyjie.cn/tag/项目管控" style="font-size: 12px;" class="color3">项目管控</a>
+                <a href="邮件.htm" tppabs="http://www.oyjie.cn/tag/邮件" style="font-size: 12px;" class="color3">邮件</a>
+                <a href="定时任务.htm" tppabs="http://www.oyjie.cn/tag/定时任务" style="font-size: 12px;" class="color3">定时任务</a>
+                <a href="maillx.htm" tppabs="http://www.oyjie.cn/tag/maillx" style="font-size: 12px;" class="color3">maillx</a>
+                <a href="搭建.htm" tppabs="http://www.oyjie.cn/tag/搭建" style="font-size: 12px;" class="color3">搭建</a>
+                <a href="博客.htm" tppabs="http://www.oyjie.cn/tag/博客" style="font-size: 12px;" class="color3">博客</a>
+                <a href="aaa.htm" tppabs="http://www.oyjie.cn/tag/aaa" style="font-size: 12px;" class="color3">aaa</a>
+                <a href="心得.htm" tppabs="http://www.oyjie.cn/tag/心得" style="font-size: 12px;" class="color3">心得</a>
+                <a href="linux.htm" tppabs="http://www.oyjie.cn/tag/linux" style="font-size: 12px;" class="color3">linux</a>
+                <a href="tale-1.htm" tppabs="http://www.oyjie.cn/tag/tale" style="font-size: 12px;" class="color3">tale</a>
+            </div>
+        </section>
+        <section class="tools-section tools-section-friends">
+            <div class="friends-wrap" id="js-friends">
+                <a target="_blank" class="main-nav-link switch-friends-link" href="javascript:if(confirm(%27http://mindhacks.cn/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://mindhacks.cn/%27" tppabs="http://mindhacks.cn/">刘未鹏 | Mind Hacks</a>
+                <a target="_blank" class="main-nav-link switch-friends-link" href="javascript:if(confirm(%27http://www.xiashuo.online/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.xiashuo.online/%27" tppabs="http://www.xiashuo.online/">把灯瞎说的博客</a>
+                <a target="_blank" class="main-nav-link switch-friends-link" href="javascript:if(confirm(%27http://biezhi.me/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://biezhi.me/%27" tppabs="http://biezhi.me/">王爵的技术博客</a>
+            </div>
+        </section>
+        <section class="tools-section tools-section-me">
+            <div class="aboutme-wrap" id="js-aboutme"></div>
+        </section>
+    </div>
+</div>
+
+    <div class="mid-col">
+        <article class="article article-type-post  animated fadeInLeft" itemscope="" itemprop="blogPost">
+            <div class="article-inner">
+                <input type="hidden" class="isFancy">
+                <header class="article-header">
+                    <h1 itemprop="name">
+                        <a name="title" class="article-title" href="9.htm" tppabs="http://www.oyjie.cn/article/9">#2018-02-21# 数据库面向对象封装[干货]</a>
+                    </h1>
+                </header>
+                <div id="post-content" class="article-entry" itemprop="articleBody">
+                    <p><h2>前情提要</h2>
+<pre><code>    大部分应用都是由程序和数据两个部分构成的，而数据除了少部分是通过配置等写死的外，大部分总是都是通过特殊格式的文件（xml、access或sqlite）或独立的系统（oracle、mysql、sql server或elasticsearch、mongodb等）承载的。因此，程序和数据的无缝联结，对应用的扩展和迭代尤为重要，对程序的高可用和可维护性非常关键。故今天需要讨论的是对数据，主要是对数据库的封装，而习惯OOP的个人，则是对数据库的面向对象的封装。
+</code></pre>
+<h2>我的思路</h2>
+<pre><code>    众所周知，我们与数据库沟通用的是数据库的语言SQL，就像我们编程的语言是Java、C#、JavaScript一样，不同的语言是不能直接沟通的，需要一个翻译层，所以这一层就是面向数据库封装，而这一层jdk里面早就实现了（jdbc），本文个人以最接近的实际数据库的文件数据库sqlite（org.sqlite.JDBC）来做代码实验。
+</code></pre>
+<pre><code class="language-java">import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+</code></pre>
+<pre><code class="language-xml">&lt;!-- maven:sqlite数据库操作 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.xerial&lt;/groupId&gt;
+    &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;
+    &lt;version&gt;${sqlite.version}&lt;/version&gt; 
+&lt;/dependency&gt;
+</code></pre>
+<pre><code class="language-sql">#java所用的sql语言也是通用的sql预处理语言，通过占位符（?）接收各种类型的变量，可以说即安全又优美。
+[oracle语法]：select * from table where 1=1 and column1=? and column2&gt;? or column3 like '%'||?||'%' 
+</code></pre>
+<pre><code>    当前的很多框架已经完美的封装了数据库，mybatis、hibernate这些对数据库的语言做了非常灵活的处理，也有一套各自自己的语法。但是，个人认为xml文件还是属于配置文件，如果能实现零配置的面向对象封装就好了。面向对象封装需要达到的程度就是通过一个对象的信息可以直接自动的产生数据库相关的sql，然后将对象的变量属性值对应sql的占位符，并且在基类上实现基本的功能。
+</code></pre>
+<pre><code class="language-java">public abstract class SqliteBaseDao&lt;T extends SqliteBaseEntity&gt; {
+    public int insert(String sql){...}
+    public int update(String sql){...}
+    public int delete(String sql){...}
+    public List&lt;T&gt; query(String sql){...}
+    // 通过对象信息实现增删查改
+    public int insert(T entity){...}
+    public int update(T entity){...}
+    public int delete(T entity){...}
+    public int deleteById(Object id){...}
+    public List&lt;T&gt; query(T entity){...}
+    public T queryById(Object id){...}
+    // 自定义SQL的实现，模仿mybatis的xml动态SQL，但是不是用xml文件的方式
+    public List&lt;T&gt; excuteQuery(T entity) {...}
+    public List&lt;T&gt; excuteQuery(Object... params) {...}
+    public int excute(T entity) {...}
+    public int excute(Object... params) {...}
+}
+</code></pre>
+<h3>一个类信息收集器</h3>
+<pre><code>    想要做到面向对象的数据库封装，就要把数据的最小单元和程序的最小单元关联起来，这两个单元都是独立的整体，再分割就会出现信息失真或不对称的情况。数据的最小单元就是表的单行记录，程序最小单元是实体类的单个对象，但是数据不一定有，对象需要实例化，需要运行起来才能提供信息。因此，这个最小单元要静态化，那就是数据库的表结构和实体类的信息关联起来。
+
+    表结构能提供的信息有表名、表列名、列属性（类型、是否为空、默认值），实体类能提供的信息有类名、类变量名、类变量名属性（变量类型），似乎大部分都能对应上，但是属性部分还不能对应上，比如是否为空、默认值，而且为了良好的Java编码规范，有些东西和数据库的一些信息是不能完全对应的，比如通常java的命名规范一般不允许带下划线，而是用驼峰命名，而数据库的表和字段确经常用下划线分割单词（主要由于很多数据库不区分表名和字段名的大小写，甚至有些数据库不支持表名和字段名的大写）这就非常尴尬了，所以，这种差异化的对应就需要配置。并且，为了增加扩展性，程序单元的实体类的信息往往要比数据单元的表结构信息多一些，比如可能会有非表字段的属性（占位符中非表字段的传入属性和结果集中非表字段的接收属性），
+
+    ibatis、hibernate就用到了这些，但是用的是xml文件，而且一旦配置出错还非常容易影响编译，并且不容易定位问题。mybatis+spring的xml和java注解让系统变得非常灵活，但是依然不能彻底的去掉xml文件，而且xml中如果出现一个小小的分号或空格都有可能引发问题，要是只用java注解就能解决掉的话就完美了。
+
+    综上，想要实现这些适配，需要几个基础的注解：表名注解、主键注解、表字段注解、非表字段标识注解、自定义SQL注解（多种）。
+</code></pre>
+<pre><code class="language-java">/**
+ * 表名注解类
+ * @author 欧阳洁
+ * @create 2017-09-30 11:16
+ */
+@java.lang.annotation.Target(value = {java.lang.annotation.ElementType.TYPE})
+@java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
+public @interface SqliteTable {
+    String name() default &quot;&quot;;
+}
+</code></pre>
+<pre><code class="language-java">/**
+ * Sqlite的ID注解类
+ * @author 欧阳洁
+ * @create 2017-09-30 11:20
+ */
+@java.lang.annotation.Target(value = {java.lang.annotation.ElementType.FIELD})
+@java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
+public @interface SqliteID {
+    /* 主键列名，默认空*/
+    String name() default &quot;&quot;;
+    /* 主键默认类型，默认integer类型 */
+    String type() default &quot;integer&quot;;
+    /* 主键是否自增长，默认是true */
+    boolean autoincrement() default true;
+}
+</code></pre>
+<pre><code class="language-java">/**
+ * Sqlite的表(列）字段注解类
+ * @author 欧阳洁
+ * @create 2017-09-30 11:20
+ */
+@java.lang.annotation.Target(value = {java.lang.annotation.ElementType.FIELD})
+@java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
+public @interface SqliteColumn {
+    /* 列名，默认空 */
+    String name() default &quot;&quot;;
+    /* 主键默认类型，默认最大20位长度的字符串 */
+    String type() default &quot;char(20)&quot;;
+    /* 主键是否自增长，默认是true */
+    boolean notNull() default true;
+}
+</code></pre>
+<pre><code class="language-java">/**
+ * 非表字段注解
+ * @author 欧阳洁
+ */
+@java.lang.annotation.Target(value = {java.lang.annotation.ElementType.FIELD})
+@java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
+public @interface SqliteTransient {
+}
+</code></pre>
+<pre><code class="language-java">/**
+ * 自定义SQL注解类
+ * @author 欧阳洁
+ */
+@java.lang.annotation.Target(value = {java.lang.annotation.ElementType.METHOD})
+@java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
+public @interface SqliteSql {
+    /* 自定义的Sql语句，带占位符的Sql */
+    String sql();
+    /* 占位符顺序对应的参数顺序，默认不带参数 */
+    String[] params() default &quot;&quot;;
+}
+</code></pre>
+<pre><code>    在上述的这些注解中，主键注解、表字段注解、非表字段标识注解其实都可以归为表字段注解，只要稍微添加某些属性就可以实现其他两个注解的功能，但是为了使用的方便性和程序的可读性，我牺牲了顶层代码的简易性，对这三个注解都做了区分和处理。而自定义SQL注解应该类似于mybatis里面的xml标签，@SqliteSql这个注解类只是实现了基本的（select、insert、delete、update）标签，搭配SqliteBaseDao里面的基本方法就可以轻松实现简单的mapper功能，而那些复杂的if else、choose when标签则需要例外些其他的辅助标签搭配使用，比如需求最多的动态where，可以定义类似于@SqliteSqlWhereIf，这样就可以简单的实现if标签，并且通过testId和parentTestId还可以实现if标签的嵌套功能，然后利用java8的新特性@Repeatable实现重复注解，或者直接定义一个集合注解（这个看着不是特别美观）就可轻松的实现判断条件非嵌套动态生成各种sql。
+</code></pre>
+<pre><code class="language-java">public abstract class SqliteBaseDao&lt;T extends SqliteBaseEntity&gt; {
+    ...
+    // 自定义SQL的实现，模仿mybatis的xml动态SQL，但是不是用xml文件的方式
+    public List&lt;T&gt; excuteQuery(T entity) {...}  //对应select标签
+    public List&lt;T&gt; excuteQuery(Object... params) {...}  //对应select标签
+    public int excute(T entity) {...}   //对应insert、update、delete标签
+    public int excute(Object... params) {...}   //对应insert、update、delete标签
+}
+</code></pre>
+<pre><code class="language-java">/**
+ * 自定义SQL注解类，实现SqliteSqlWhereIf的重复注解
+ * @author 欧阳洁
+ */
+@java.lang.annotation.Target(value = {java.lang.annotation.ElementType.METHOD})
+@java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
+public @interface SqliteSqlWhereIfs {
+    SqliteSqlWhereIf[] value();
+}
+/**
+ * 自定义SQL注解类，条件判断注解，用于生成动态SQL
+ * @author 欧阳洁
+ */
+@java.lang.annotation.Target(value = {java.lang.annotation.ElementType.METHOD})
+@java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
+@java.lang.annotation.Repeatable(SqliteSqlWhereIfs.class)
+public @interface SqliteSqlWhereIf {
+    /* 判断条件标识ID */
+    int testId();
+    /* 所属层级，默认0，最外层 */
+    int parentTestId() default 0;
+    /* 判断条件类型，==、&gt;、&lt;、&gt;=、&lt;=、eq、ne */
+    String testType() default &quot;eq&quot;;
+    /* 判断字段名 */
+    String testName();
+    /* 符合条件的值 */
+    String[] testTrueValue();
+    /* 符合条件对应的动态SQL */
+    String[] testTrueSql() default &quot;&quot;;
+    /* 占位符顺序对应的参数顺序，默认不带参数 */
+    String[] params() default &quot;&quot;;
+}
+
+例如：
+@SqliteSql(sql = &quot;select * from this.tableName where 1=1&quot;)
+@SqliteSqlWhereIf(testId=1,testType=&quot;eq&quot;,testName=&quot;searchType&quot;,testTrueValue={&quot;2&quot;},testTrueSql=&quot; and create_time&gt;datetime('now') &quot;)
+@SqliteSqlWhereIf(testId=2,testType=&quot;ne&quot;,testName=&quot;name&quot;,testTrueValue={&quot;&quot;},testTrueSql=&quot; and name like '%'||?||'%' &quot;,parentTestId=1,params={&quot;name&quot;})
+@SqliteSqlWhereIf(testId=3,testType=&quot;eq&quot;,testName=&quot;author&quot;,testTrueValue={&quot;&quot;},testTrueSql=&quot; and author=? or name=? &quot;,parentTestId=1,params={&quot;author&quot;,&quot;author&quot;})
+public List&lt;XXX&gt; method1(XXX entity){ return super.excuteQuery(entity); }
+</code></pre>
+<pre><code>    于是，类信息收集器能做成静态的吗，不能。因为每个表的信息不同，就会对应不同的类信息，如果我们做成静态的，那么就会产生很多无意义的重复代码，我们要用对象存储他，并且是一个表用一个对象去存储。这样，我们就可以准确定义一个类信息收集器的收集内容了，如下所示：
+</code></pre>
+<pre><code class="language-java">/**
+ * 实体类T的信息收集器
+ * Sqlite的Sql语句生成器
+ * @author 欧阳洁
+ * @create 2017-09-30 10:56
+ */
+public class SqliteSqlHelper&lt;T extends SqliteBaseEntity&gt; {
+    private Class&lt;T&gt; targetClass;//实体类
+    private String tableName;//表名
+    private String idName;//主键名
+    private Field idField;//主键变量属性
+    List&lt;Field&gt; columnFields;//表列名对应的变量属性集合
+    Map&lt;String, String&gt; columnMap;//表列名和字段映射map
+
+    /**
+     * 构造函数
+     * @param targetClass
+     */
+    public SqliteSqlHelper(Class&lt;T&gt; targetClass) {
+        this.tableName = this.getTableNameForClass(targetClass);
+        this.targetClass = targetClass;
+        this.columnFields = new Vector&lt;Field&gt;();
+        this.columnMap = new HashMap&lt;String, String&gt;();
+        this.getColumnFields();//表列名对应的变量属性相关信息，包括表列名和字段映射
+    }
+    ...
+}
+</code></pre>
+<h3>一个SQL生成器</h3>
+<pre><code>    和数据库沟通就需要使用相应的SQL语言，而通用的关系型数据库（oracle、mysql、sql server等），甚至是非关系型的数据库NOSQL（elasticsearch、mongodb等），绝大部分交互无非就是增删查改，而SQL的增删查改语言几乎是通用的。
+</code></pre>
+<pre><code class="language-sql"># 建表
+    create table t_test_table(
+        id integer primary key autoincrement not null,
+        name char(100) not null,
+        author char(100) not null,
+        article text,
+        create_time char(20) not null
+    );
+# 新增
+    insert into t_test_table(name,author, article,create_time)
+        values (&quot;test11&quot;,&quot;petter&quot;,&quot;article1&quot;,&quot;2017-09-29 17:01:22&quot;);
+# 查询
+    select * from t_test_table;
+    select * from t_test_table where id=1;
+# 修改
+    update t_test_table
+        set name = &quot;test11_修改&quot;, article = &quot;article1_修改&quot;, create_time = &quot;2017-09-29 17:01:27&quot;
+            where id=1;
+# 删除
+    delete from t_test_table where id = 1;
+</code></pre>
+<pre><code>    这里多了个建表SQL，这里是为了实现自动化部署数据库用的，相当于程序驱动数据，让更多主动层面转移到程序代码这一层。当我们为我们的业务新增一个数据实体时候，程序就能自动的去生成规范的数据库，免去了繁琐的手动创建以及容易弄错的字段类型方面的细节，如果封装的好的话，迭代更新就能免去SQL脚本了。扩展一下的话，在表名注解里面添加数据库的链接属性还可以实现平滑分库的功能（这个可以，对于sqlite这种小型数据库，如果能实现分库的话，那就不再是小型数据库了，当然本文的例子还是以单数据库为例）。
+</code></pre>
+<p>而且建表的sql生成比较简单，只要单独的根据实体类的信息就能直接生成，如下：</p>
+<pre><code class="language-java"># SqliteSqlHelper.java
+public class SqliteSqlHelper&lt;T extends SqliteBaseEntity&gt; {
+    /**
+     * 创建创建表的sql语句
+     */
+    public String createTableSql() {
+        StringBuffer sql = new StringBuffer(&quot;create table if not exists &quot;);
+        sql.append(this.tableName).append(&quot;(&quot;);
+        boolean useCumma = false;
+        for (Field field : this.columnFields) {
+            if (useCumma) {
+                sql.append(&quot;,&quot;);//第一次不用逗号
+            }else{
+                useCumma = true;
+            }
+            
+            String columnName = field.getName();
+            String columnType = &quot;char(20)&quot;;
+            String notNull = &quot;&quot;;
+            SqliteID id = field.getAnnotation(SqliteID.class);
+            if (id != null) {
+                columnName = SqliteUtils.isBlank(id.name()) ? field.getName() : id.name();
+                columnType = id.type();
+                //主键默认不为空，如果自增长默认自增长
+                notNull = id.autoincrement() ? &quot; primary key autoincrement not null&quot; : &quot; primary key not null&quot;;
+            } else {
+                SqliteColumn column = field.getAnnotation(SqliteColumn.class);
+                if (null != column) {
+                    columnName = SqliteUtils.isBlank(column.name()) ? field.getName() : column.name();
+                    columnType = column.type();
+                    notNull = column.notNull() ? &quot; not null&quot; : &quot;&quot;;
+                }
+            }
+            sql.append(columnName.toLowerCase()).append(&quot; &quot;).append(columnType.toLowerCase()).append(&quot; &quot;).append(notNull);
+        }
+        sql.append(&quot;)&quot;);
+        return sql.toString();
+    }
+    ...
+}
+
+# SqliteBaseDao.java
+public abstract class SqliteBaseDao&lt;T extends SqliteBaseEntity&gt; {
+    private String tableName;
+    private Class entityClazz;
+    private SqliteSqlHelper sqlHelper;
+
+    public SqliteBaseDao(Class&lt;T&gt; entityClass) {
+        this.sqlHelper = new SqliteSqlHelper(entityClass);
+        this.tableName = this.sqlHelper.getTableName();
+        this.entityClazz = entityClass;
+        //调用该方法就能在使用时检查和创建表，可以通过配置信息判断是否执行，达到开关控制的效果
+        this.existOrCreateTable();
+    }
+    /**
+     * 检查表是否存在，不存在则创建
+     */
+    public void existOrCreateTable() {
+        String sql = this.sqlHelper.createTableSql();
+        SqliteHelper.execute(sql);
+    }
+    ...
+}
+</code></pre>
+<pre><code>    同理，增删查改，也是通过类的信息进行sql的组装，但是却依赖调用入参实现动态sql生成。就以查询为例，默认的动态sql生成，基于传入的实体类对象里面的值，一般为空的不做处理，不为空的条件用and做连接起来形成动态的查询SQL。
+</code></pre>
+<pre><code class="language-java"># SqliteSqlHelper.java
+public class SqliteSqlHelper&lt;T extends SqliteBaseEntity&gt; {
+    /**
+     * 创建查询语句
+     */
+    public void createSelect(T target) {
+        List&lt;Object&gt; param = new Vector&lt;Object&gt;();
+        StringBuffer sqlBuffer = new StringBuffer();
+        sqlBuffer.append(&quot;SELECT * FROM &quot;).append(this.tableName);
+        finishWhereOfAnd(sqlBuffer, param, target);
+    
+        target.setCurrentSql(sqlBuffer.toString());
+        target.setCurrentParam(param);
+    }
+    /**
+     * 补全用and连接的sql语句
+     * @param sqlBuffer
+     * @param param
+     * @param target
+     */
+    private void finishWhereOfAnd(StringBuffer sqlBuffer, List&lt;Object&gt; param, T target) {
+        sqlBuffer.append(&quot; WHERE 1=1 &quot;);
+        Object idValue = null;
+        if (null != this.idField) {
+            idValue = readField(this.idField, target);
+        }
+        if (idValue != null) {
+            sqlBuffer.append(&quot; and &quot;).append(this.idName).append(&quot;=?&quot;);
+            param.add(idValue);
+        } else {
+            for (Field field : this.columnFields) {
+                if (!Modifier.isStatic(field.getModifiers())) {
+                    Object currentValue = readField(field, target);
+                    if (null != currentValue &amp;&amp; !SqliteUtils.equals(this.idName, field.getName())) {
+                        String columnName = field.getName();
+                        SqliteColumn sqliteColumn = field.getAnnotation(SqliteColumn.class);
+                        if (null != sqliteColumn) {
+                            columnName = SqliteUtils.isBlank(sqliteColumn.name()) ? field.getName() : sqliteColumn.name();
+                        }
+                        sqlBuffer.append(&quot; and &quot;).append(columnName.toLowerCase()).append(&quot;=?&quot;);
+                        param.add(currentValue);
+                    }
+                }
+            }
+        }
+    }
+    ...
+}
+</code></pre>
+<pre><code>    对于自定义SQL的获取和动态组装生成，它相对其他类的SQL就要复杂一些，因为这个注解不是在实体类中，而是在Dao类中，而且是一种用于方法的注解。想要知道如何获取这类注解的信息，就需要了解java程序的一些运行原理。
+</code></pre>
+<blockquote>
+<p>线程栈区的方法栈：简而言之，就是每个运行中的程序会有一个线程，而调用的方法、调用方法调用的方法、调用方法调用的方法调用的方法...他们会形成该线程的方法栈，进行中的方法都会放入这个栈中，这样我们就可以在运行时候获取到对应的方法了。</p>
+</blockquote>
+<pre><code>    然而，我们要使得注解和编码更加简洁易懂，我们需要把这部分获取的代码放到Dao类继承的基类（SqliteBaseDao）中，通过基类获取子类的某个方法的注解信息。虽然基类获取子类方法信息与常规程序设计有较大差异，但是只有这样才能实现优美的封装。下面为自定义查询部分代码（增删改同理）：
+</code></pre>
+<pre><code class="language-java"># SqliteSqlHelper.java
+public class SqliteSqlHelper&lt;T extends SqliteBaseEntity&gt; {
+    /**
+     * 创建自定义查询语句
+     */
+    public void convertSelfSql(StackTraceElement daoMethodInfo, T target) {
+        if (null == daoMethodInfo) {//为空用默认的查询语句
+            createSelect(target);
+            return;
+        }
+        Method method = getMethod(daoMethodInfo.getClassName(), daoMethodInfo.getMethodName(), target.getClass());
+        if (null == method) {//为空用默认的查询语句
+            createSelect(target);
+            return;
+        }
+        SqliteSql sqliteSql = method.getAnnotation(SqliteSql.class);
+        if (null != sqliteSql) {
+            List&lt;Object&gt; param = new Vector&lt;Object&gt;();
+            String[] paramNameArr = sqliteSql.params();
+            if (null != paramNameArr &amp;&amp; paramNameArr.length &gt; 0) {
+                Field[] fieldArray = this.targetClass.getDeclaredFields();
+                for (String paramName : paramNameArr) {
+                    Object value = null;
+                    for (Field field : fieldArray) {
+                        if (paramName.equalsIgnoreCase(field.getName())) {
+                            value = readField(field, target);
+                            break;
+                        }
+                    }
+                    param.add(value);
+                }
+
+            }
+            String sql = SqliteUtils.replace(sqliteSql.sql(), &quot;this.tableName&quot;, this.tableName);
+            //TODO 此处可以读取自定义SQL的辅助注解，像上面提到的SqliteSqlWhereIf注解，实现动态SQL
+            target.setCurrentSql(sql);
+            target.setCurrentParam(param);
+        }
+    }
+    /**
+     * 创建自定义查询语句，参数随机
+     */
+    public String convertSelfSql(StackTraceElement daoMethodInfo, Object... params) {
+        if (null == daoMethodInfo) {//为空不做处理
+            System.out.println(&quot;未获取到自定义的语句！&quot;);
+            return null;
+        }
+        Class&lt;?&gt;[] classArr = null;
+        if (null != params &amp;&amp; params.length &gt; 0) {
+            classArr = new Class&lt;?&gt;[params.length];
+            for (int i = 0; i &lt; params.length; i++) {
+                classArr[i] = params[i].getClass();
+            }
+        }
+        Method method = getMethod(daoMethodInfo.getClassName(), daoMethodInfo.getMethodName(), classArr);
+        if (null == method) {//为空不做处理
+            System.out.println(&quot;未获取到自定义的语句！&quot;);
+            return null;
+        }
+        SqliteSql sqliteSql = method.getAnnotation(SqliteSql.class);
+        //TODO 此处可以读取自定义SQL的辅助注解，像上面提到的SqliteSqlWhereIf注解，实现动态SQL
+        String sql = SqliteUtils.replace(sqliteSql.sql(), &quot;this.tableName&quot;, this.tableName);
+        return sql;
+    }
+    ...
+}
+
+# SqliteBaseDao.java
+public abstract class SqliteBaseDao&lt;T extends SqliteBaseEntity&gt; {
+    /**
+     * 通过自定义注解执行查询的语句
+     */
+    public List&lt;T&gt; excuteQuery(T entity) {
+        //[0]为getStackTrace方法，[1]当前的excuteQuery方法，[2]为调用excuteQuery方法的方法
+        StackTraceElement parrentMethodInfo = Thread.currentThread().getStackTrace()[2];
+        this.sqlHelper.convertSelfSql(parrentMethodInfo, entity);
+        String jsonStr = SqliteHelper.query(entity.getCurrentSql(), entity.getCurrentParam(), this.getColumMap());
+        if (jsonStr == null) return null;
+        List&lt;T&gt; result = SqliteUtils.getInstance(jsonStr, entity.getClass());
+        if (SqliteUtils.isNotEmpty(result)) {
+            return result;
+        } else {
+            return null;
+        }
+    }
+    /**
+     * 通过自定义注解执行查询的语句
+     */
+    public List&lt;T&gt; excuteQuery(Object... params) {
+        //[0]为getStackTrace方法，[1]当前的excuteQuery方法，[2]为调用excuteQuery方法的方法
+        StackTraceElement parrentMethodInfo = Thread.currentThread().getStackTrace()[2];
+        String sql = this.sqlHelper.convertSelfSql(parrentMethodInfo, params);
+        List&lt;Object&gt; paramList = new Vector&lt;Object&gt;();
+        if (null != params &amp;&amp; params.length &gt; 0) {
+            for (Object o : params) {
+                paramList.add(o);
+            }
+        }
+        String jsonStr = SqliteHelper.query(sql, paramList, this.getColumMap());
+        if (jsonStr == null) return null;
+        List&lt;T&gt; result = SqliteUtils.getInstance(jsonStr, this.entityClazz);
+        if (SqliteUtils.isNotEmpty(result)) {
+            return result;
+        } else {
+            return null;
+        }
+    }
+    ...    
+}
+
+# 实体DAO中使用如下
+public class TestTableDao extends SqliteBaseDao&lt;TestTable&gt; {
+    @SqliteSql(sql = &quot;select t.create_time publish_time,t.* from this.tableName t where name like '%'||?||'%'&quot;, params = {&quot;name&quot;})
+    public List&lt;TestTable&gt; getByName(TestTable entity) {
+        //List&lt;T&gt; super.excuteQuery(T entity)，通过params上的参数顺序在entity中获取，并依次填充占位符
+        return super.excuteQuery(entity);
+    }
+    @SqliteSql(sql = &quot;select * from this.tableName where name like '%'||?||'%' or id=?&quot;)
+    public List&lt;TestTable&gt; getByNameOrId(String name, Integer id) {
+        //List&lt;T&gt; super.excuteQuery(Object... params)，这里的参数顺序对应自定义的SQL的占位符顺序
+        return super.excuteQuery(name, id);
+    }
+    ...
+}
+</code></pre>
+<pre><code>    另外，自定义SQL注解对于像oracle这样的存储过程和函数占比较大的数据库，调用存储过程可是无往不利，不过就不知道占位符返回集合的存储过程或函数，方不方便数据的填充组装（TODO）。
+</code></pre>
+<h3>一个数据组装器</h3>
+<pre><code>    上面说到数据的组装，这也是比较关键的一个环节，只有这一步OK了，这个封装才算OK。总所周知，数据库表字段类型五花八门，想要很好的和java的类型对应上，确实要花费一点精力。这里为了节省时间和篇幅，个人取了个巧，将数据统一转化为JSON，然后统一通过json转对象。从代码上省去了复杂的类型对应，也摒弃了一个个取值，然后通过反射对应写值到对象属性里面的不安全操作及不确定异常，然而代价可能会对转化效率有影响。所以，关键就是需要一种不影响速度的json转化，fastjson基本满足条件。
+</code></pre>
+<pre><code class="language-java"># SqliteHelper.java
+/**
+ * 根据结果集返回数据json
+ */
+public static String getDataJson(ResultSet rs, Map&lt;String, String&gt; columnMap) throws SQLException {
+    String[] nameArr = null;
+    List&lt;Map&lt;String, Object&gt;&gt; result = new ArrayList&lt;Map&lt;String, Object&gt;&gt;();
+    int rows = 1;
+    while (rs.next()) {
+        if (rows++ == 1) {
+            nameArr = getNameArr(rs);// 获取列名
+        }
+
+        Map&lt;String, Object&gt; one = new LinkedHashMap&lt;String, Object&gt;();
+        for (int i = 0; i &lt; nameArr.length; i++) {
+            String nameKey = null == columnMap ? nameArr[i] : columnMap.get(nameArr[i]);
+            nameKey = null == nameKey ? nameArr[i] : nameKey;
+            one.put(nameKey, rs.getObject(i + 1));
+        }
+        result.add(one);
+    }
+    String dataStr = SqliteUtils.getJsonList(result);
+    System.out.println(&quot;执行查询语句结果==&gt; &quot; + dataStr);
+    return dataStr;
+}
+</code></pre>
+<pre><code class="language-java"># SqliteUtils.java
+/**
+ * 转换 List&lt;Object&gt; 为 Json字符串
+ */
+public static String getJsonList(List list) {
+    if (list == null) return &quot;[]&quot;;
+    StringBuffer jsonBuf = new StringBuffer(&quot;[&quot;);
+    boolean flag = false;
+    for (Object obj : list) {
+        if (flag) {
+            jsonBuf.append(&quot;,&quot;);
+        }else{
+            flag = true;
+        }
+        String jsonOne = getJsonObject(obj);
+        jsonBuf.append(jsonOne);
+    }
+    jsonBuf.append(&quot;]&quot;);
+    return jsonBuf.toString();
+}
+public static String getJsonObject(Object object) {
+    try {
+        String json = SqliteUtils.toString(JSONObject.fromObject(object));
+        return json;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return &quot;{}&quot;;
+    }
+}
+/**
+ * json字符串转对象，转对集合
+ * @param jsonString json字符串
+ * @param clazz 对象class，如果要转化为List&lt;ObjectA&gt; 传入ObjectA.class
+ * @return Object [返回类型说明]
+ * @throws throws [违例类型] [违例说明]
+ * @see [类、类#方法、类#成员]T
+ */
+public static &lt;T&gt; T getInstance(String jsonString, Class clazz) {
+    if (SqliteUtils.isBlank(jsonString)) return null;
+    if (&quot;[]&quot;.equals(SqliteUtils.trim(jsonString))) return null;
+    Object json = new JSONTokener(jsonString).nextValue();//字符串 转json 类型对象
+    if (json instanceof JSONObject) {  //这种   {&quot;XXX&quot;: &quot;101&quot;,{},[]} 对象
+        return (T) SqliteJsonMapper.nonDefaultMapper().fromJson(json.toString(), clazz);
+    } else {
+        //如果集合不为null则是返回成功,则需要修改数据的时间
+        //创建转换json的需要转换的集合类型   [{},{}]
+        JavaType javaType = SqliteJsonMapper.nonDefaultMapper().contructCollectionType(List.class, clazz);
+        return SqliteJsonMapper.nonDefaultMapper().fromJson(jsonString, javaType);//反序列化复杂List
+    }
+}
+</code></pre>
+<h2>验证和测试</h2>
+<h3>定义表结构实体</h3>
+<pre><code class="language-java">/**
+ * 测试表对应实体类
+ * @author 欧阳洁
+ * @create 2017-09-30 9:44
+ **/
+@SqliteTable(name = &quot;t_test_table&quot;)
+public class TestTable extends SqliteBaseEntity {
+    /**
+     * 主键
+     */
+    @SqliteID
+    private Integer id;
+    /**
+     * 名称
+     */
+    @SqliteColumn(type = &quot;char(100)&quot;, notNull = true)
+    private String name;
+    /**
+     * 作者
+     */
+    @SqliteColumn(notNull = true)
+    private String author;
+    /**
+     * 正文
+     */
+    @SqliteColumn(type = &quot;text&quot;)
+    private String article;
+    /**
+     * 创建时间
+     */
+    @SqliteColumn(name = &quot;create_time&quot;,type = &quot;char(20)&quot;, notNull = true)
+    private String createTime;
+    /**
+     * 查询类型 （非表字段）
+     */
+    @SqliteTransient
+    private String searchType;
+    /**
+     * 发布时间 （非表字段）
+     * 注：这里不使用SqliteColumn主键，默认的列名为publishtime
+     */
+    @SqliteTransient
+    @SqliteColumn(name = &quot;publish_time&quot;)
+    private String publishTime;
+
+    //get、set此处省略
+}
+</code></pre>
+<h3>定义实体对应的Dao</h3>
+<pre><code class="language-java">/**
+ * Sqlite[t_test_table]的dao
+ * @author 欧阳洁
+ * @create 2017-09-29 17:17
+ */
+public class TestTableDao extends SqliteBaseDao&lt;TestTable&gt; {
+    /**
+     * 构造函数
+     */
+    public TestTableDao() {// 必须要对应实现父类的构造方法
+        super(TestTable.class);// 表实体对应类
+    }
+
+    /**
+     * 根据名称模糊查找数据
+     * @param entity
+     * @return
+     */
+    @SqliteSql(sql = &quot;select t.create_time publish_time,t.* from this.tableName t where name like '%'||?||'%'&quot;, params = {&quot;name&quot;})
+    public List&lt;TestTable&gt; getByName(TestTable entity) {
+        //List&lt;T&gt; super.excuteQuery(T entity)，通过params上的参数顺序在entity中获取，并依次填充占位符
+        return super.excuteQuery(entity);
+    }
+
+    /**
+     * 根据名称模糊查找数据并包含id查找
+     * @param name
+     * @param id
+     * @return
+     */
+    @SqliteSql(sql = &quot;select * from this.tableName where name like '%'||?||'%' or id=?&quot;)
+    public List&lt;TestTable&gt; getByNameOrId(String name, Integer id) {
+        //List&lt;T&gt; super.excuteQuery(Object... params)，这里的参数顺序对应自定义的SQL的占位符顺序
+        return super.excuteQuery(name, id);
+    }
+}
+</code></pre>
+<h3>定义Dao对应的Service</h3>
+<pre><code class="language-java">/**
+ * Sqlite[t_test_table]的service
+ * @author 欧阳洁
+ * @create 2017-09-30 15:16
+ */
+@Service
+public class TestTableService extends SqliteBaseService&lt;TestTable, TestTableDao&gt; {
+    public TestTableService() {// 必须要对应实现父类的构造方法
+        super(TestTableDao.class);// 对应的Dao类
+    }
+    public List&lt;TestTable&gt; getByName(String name) {
+        TestTable entity = new TestTable();
+        entity.setName(name);
+        return this.getBaseDao().getByName(entity);
+    }
+    public List&lt;TestTable&gt; getByNameOrId(String name, Integer id) {
+        return this.getBaseDao().getByNameOrId(name, id);
+    }
+}
+</code></pre>
+<h3>单元测试</h3>
+<pre><code class="language-java">//默认的方法测试，包括初始化检查表是否存在并构建、对象插入、对象查询（主键穿透查询）
+————————————————————————————————————————&lt;SqliteTest.java&gt;—————————————————————————————————————
+@Test
+public void test2() {
+    TestTableService sqliteService = new TestTableService();//没有使用spring注入，暂时自己构建
+    TestTable entity = new TestTable();
+    entity.setName(&quot;test1&quot;);
+    entity.setAuthor(&quot;petter&quot;);
+    entity.setArticle(&quot;article1&quot;);
+    entity.setCreateTime(MyDate.getStringDate());
+    sqliteService.insert(entity);
+    entity.setName(&quot;title2&quot;);
+    entity.setAuthor(&quot;bob&quot;);
+    entity.setArticle(&quot;article2&quot;);
+    entity.setCreateTime(MyDate.getStringDate());
+    sqliteService.insert(entity);
+
+    TestTable queryEntity = new TestTable();
+    sqliteService.query(queryEntity);
+    queryEntity.setAuthor(&quot;petter&quot;);
+    sqliteService.query(queryEntity);
+    queryEntity.setName(&quot;test&quot;);
+    sqliteService.query(queryEntity);
+    queryEntity.setId(1);
+    sqliteService.query(queryEntity);
+}
+</code></pre>
+<p>test2()测试结果：</p>
+<blockquote>
+<p>执行非查询语句==&gt; create table if not exists t_test_table(id integer  primary key autoincrement not null,name char(100)  not null,author char(20)  not null,article text ,<font color='red'>create_time</font> char(20)  not null)
+执行非查询语句影响行数==&gt; 0
+执行非查询语句==&gt; INSERT INTO t_test_table(name,author,article,create_time)values(?,?,?,?)
+执行非查询语句影响行数==&gt; 1
+执行非查询语句==&gt; INSERT INTO t_test_table(name,author,article,create_time)values(?,?,?,?)
+执行非查询语句影响行数==&gt; 1
+执行查询语句==&gt; SELECT * FROM t_test_table WHERE 1=1
+执行查询语句结果==&gt; [{&quot;id&quot;:1,&quot;name&quot;:&quot;test1&quot;,&quot;author&quot;:&quot;petter&quot;,&quot;article&quot;:&quot;article1&quot;,&quot;<font color='red'>createTime</font>&quot;:&quot;2018-02-20 22:54:32&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;title2&quot;,&quot;author&quot;:&quot;bob&quot;,&quot;article&quot;:&quot;article2&quot;,&quot;<font color='red'>createTime</font>&quot;:&quot;2018-02-20 22:54:32&quot;}]
+执行查询语句==&gt; SELECT * FROM t_test_table WHERE 1=1  and author=?
+执行查询语句结果==&gt; [{&quot;id&quot;:1,&quot;name&quot;:&quot;test1&quot;,&quot;author&quot;:&quot;petter&quot;,&quot;article&quot;:&quot;article1&quot;,&quot;<font color='red'>createTime</font>&quot;:&quot;2018-02-20 22:54:32&quot;}]
+执行查询语句==&gt; SELECT * FROM t_test_table WHERE 1=1  and name=? and author=?
+执行查询语句结果==&gt; []
+执行查询语句==&gt; SELECT * FROM t_test_table WHERE 1=1  and id=?
+执行查询语句结果==&gt; [{&quot;id&quot;:1,&quot;name&quot;:&quot;test1&quot;,&quot;author&quot;:&quot;petter&quot;,&quot;article&quot;:&quot;article1&quot;,&quot;<font color='red'>createTime</font>&quot;:&quot;2018-02-20 22:54:32&quot;}]</p>
+</blockquote>
+<hr />
+<pre><code class="language-java">//自定义的SQL查询测试，包含自定义SQL、结果集中额外列对应填充和查询对象属性值定位获取
+——————————————————————————————————————&lt;SqliteTest.java&gt;——————————————————————————————————————
+@Test
+public void test3() {
+    TestTableService sqliteService = new TestTableService();//没有使用spring注入，暂时自己构建
+    List&lt;TestTable&gt; list = sqliteService.getByName(&quot;test&quot;);
+}
+</code></pre>
+<p>test3()测试结果：</p>
+<blockquote>
+<p>执行非查询语句==&gt; create table if not exists t_test_table(id integer  primary key autoincrement not null,name char(100)  not null,author char(20)  not null,article text ,create_time char(20)  not null)
+执行非查询语句影响行数==&gt; 0
+执行查询语句==&gt; select t.create_time publish_time,t.* from t_test_table t where name like '%'||?||'%'
+执行查询语句结果==&gt; [{&quot;<font color='red'>publishTime</font>&quot;:&quot;2018-02-20 22:36:18&quot;,&quot;id&quot;:1,&quot;name&quot;:&quot;test1&quot;,&quot;author&quot;:&quot;petter&quot;,&quot;article&quot;:&quot;article1&quot;,&quot;createTime&quot;:&quot;2018-02-20 22:36:18&quot;}]</p>
+</blockquote>
+<hr />
+<pre><code class="language-java">//自定义的SQL查询测试，这里直接撇开了实体类，可以任意的传参了，甚至调用存储过程或函数只需要一行注解就够了
+———————————————————————————————————————&lt;SqliteTest.java&gt;—————————————————————————————————————
+@Test
+public void test4() {
+    TestTableService sqliteService = new TestTableService();//没有使用spring注入，暂时自己构建
+    List&lt;TestTable&gt; list = sqliteService.getByNameOrId(&quot;title&quot;, 1);
+}
+</code></pre>
+<blockquote>
+<p>执行非查询语句==&gt; create table if not exists t_test_table(id integer  primary key autoincrement not null,name char(100)  not null,author char(20)  not null,article text ,create_time char(20)  not null)
+执行非查询语句影响行数==&gt; 0
+执行查询语句==&gt; select * from t_test_table where name like '%'||?||'%' or id=?
+执行查询语句结果==&gt; [{&quot;id&quot;:1,&quot;name&quot;:&quot;test1&quot;,&quot;author&quot;:&quot;petter&quot;,&quot;article&quot;:&quot;article1&quot;,&quot;createTime&quot;:&quot;2018-02-20 22:36:18&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;title2&quot;,&quot;author&quot;:&quot;bob&quot;,&quot;article&quot;:&quot;article2&quot;,&quot;createTime&quot;:&quot;2018-02-20 22:36:19&quot;}]</p>
+</blockquote>
+<h2>源码</h2>
+<ul>
+<li>Git地址：<a href="javascript:if(confirm(%27https://github.com/petterobam/my-sqlite  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/petterobam/my-sqlite%27" tppabs="https://github.com/petterobam/my-sqlite">https://github.com/petterobam/my-sqlite</a></li>
+<li>Git检出地址：https://github.com/petterobam/my-sqlite.git</li>
+<li>源码下载：<a href="rpdd0gs1vkhrvr3rlhh4khq8i6.rar" tppabs="http://www.oyjie.cn/upload/2018/02/rpdd0gs1vkhrvr3rlhh4khq8i6.rar">点击下载</a></li>
+</ul>
+</p>
+                    <p class="post-info">
+                        本文由 <a href="">petterObam</a> 创作，采用 <a href="javascript:if(confirm(%27https://creativecommons.org/licenses/by/4.0/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://creativecommons.org/licenses/by/4.0/%27" tppabs="https://creativecommons.org/licenses/by/4.0/"
+                                                           target="_blank"
+                                                           rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:
+                        2018/02/21 04:55
+                    </p>
+                </div>
+                <div class="article-info article-info-index">
+                    <div class="article-tag tagcloud">
+                        <i class="icon-price-tags"></i>
+                        <ul class="article-tag-list">
+                            <li class="article-tag-list-item"><a class="color3" href="#"
+                                                                 style="font-size: 12px;"><a href="数据库-1.htm" tppabs="http://www.oyjie.cn/tag/%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a><a href="封装-1.htm" tppabs="http://www.oyjie.cn/tag/%E5%B0%81%E8%A3%85">封装</a><a href="面向对象-1.htm" tppabs="http://www.oyjie.cn/tag/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">面向对象</a><a href="sqlite.htm" tppabs="http://www.oyjie.cn/tag/sqlite">sqlite</a></a></li>
+                        </ul>
+                    </div>
+                    <div class="post-data archive-article-date">
+                        <time datetime="2018-02-21" itemprop="datePublished">发布于 2018-02-21
+                        </time>
+                        /<span> <a href="sqlite-1.htm" tppabs="http://www.oyjie.cn/category/sqlite">sqlite</a><a href="数据库-2.htm" tppabs="http://www.oyjie.cn/category/%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a><a href="体会.htm" tppabs="http://www.oyjie.cn/category/%E4%BD%93%E4%BC%9A">体会</a><a href="JAVA.htm" tppabs="http://www.oyjie.cn/category/JAVA">JAVA</a> </span>/ <a href="#comments">没有评论</a> /
+                        30浏览<a name="footer">.</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </article>
+
+		<div id="post-bottom-bar" class="post-bottom-bar">
+		    <div class="bottom-bar-inner">
+		        <div class="bottom-bar-items social-share left">
+		            <span class="bottom-bar-item">Share : </span>
+		            <span class="bottom-bar-item bottom-bar-facebook"><a href="javascript:if(confirm(%27https://www.facebook.com/sharer/sharer.php?u=http://www.oyjie.cn/article/9  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.facebook.com/sharer/sharer.php?u=http://www.oyjie.cn/article/9%27" tppabs="https://www.facebook.com/sharer/sharer.php?u=http://www.oyjie.cn/article/9" target="_blank" title="#2018-02-21# 数据库面向对象封装[干货]" rel="nofollow">facebook</a></span>
+		            <span class="bottom-bar-item bottom-bar-twitter"><a href="javascript:if(confirm(%27https://twitter.com/intent/tweet?url=http://www.oyjie.cn/article/9&text=  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/intent/tweet?url=http://www.oyjie.cn/article/9&text=#2018-02-21# 数据库面向对象封装[干货]%27" tppabs="https://twitter.com/intent/tweet?url=http://www.oyjie.cn/article/9&text=#2018-02-21# 数据库面向对象封装[干货]" target="_blank" title="#2018-02-21# 数据库面向对象封装[干货]" rel="nofollow">Twitter</a></span>
+		            <span class="bottom-bar-item bottom-bar-weibo"><a href="javascript:if(confirm(%27http://service.weibo.com/share/share.php?url=http://www.oyjie.cn/article/9&title=  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://service.weibo.com/share/share.php?url=http://www.oyjie.cn/article/9&title=#2018-02-21# 数据库面向对象封装[干货]%27" tppabs="http://service.weibo.com/share/share.php?url=http://www.oyjie.cn/article/9&title=#2018-02-21# 数据库面向对象封装[干货]" target="_blank" title="#2018-02-21# 数据库面向对象封装[干货]" rel="nofollow">Weibo</a></span>
+		            <span class="bottom-bar-item bottom-bar-qrcode"><a href="javascript:if(confirm(%27http://pan.baidu.com/share/qrcode?w=300&h=300&url=http://www.oyjie.cn/article/9  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://pan.baidu.com/share/qrcode?w=300&h=300&url=http://www.oyjie.cn/article/9%27" tppabs="http://pan.baidu.com/share/qrcode?w=300&h=300&url=http://www.oyjie.cn/article/9" target="_blank" rel="nofollow">QRcode</a></span>
+		        </div>
+		        <div class="bottom-bar-items right">
+		            <span class="bottom-bar-item"><a href="3.htm" tppabs="http://www.oyjie.cn/article/3" title="#2017-09-10# Tale模板框架博客搭建记录">→</a></span>
+		            <span class="bottom-bar-item"></span>
+		            <span class="bottom-bar-item"><a href="#footer">↓</a></span>
+		            <span class="bottom-bar-item"><a href="#title">↑</a></span>
+		        </div>
+		    </div>
+		</div>
+		
+        <div id="9" class="comment-container">
+    <div id="comments" class="clearfix">
+        <span class="response"></span>
+
+        <form method="post" id="comment-form" class="comment-form" role="form" onsubmit="return TaleComment.subComment();">
+            <input type="hidden" name="coid" id="coid"/>
+            <input type="hidden" name="cid" id="cid" value="9"/>
+            <input type="hidden" name="_csrf_token" value="rcWFS_DKH31sdj--JHiQl2"/>
+            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix"
+                   placeholder="姓名 (*)" value="" required/>
+            <input type="email" name="mail" id="mail" class="form-control input-control clearfix" placeholder="邮箱 (*)"
+                   value="" required/>
+            <input type="url" name="url" id="url" class="form-control input-control clearfix" placeholder="网址 (http://)"
+                   value=""/>
+            <textarea name="text" id="textarea" class="form-control" placeholder="请留下你的评论..." required minlength="5" maxlength="2000"></textarea>
+            <button type="submit" class="submit" id="misubmit">提交</button>
+        </form><br/>
+
+
+
+
+    </div>
+</div>
+<script type="text/javascript">
+(function () {
+    window.TaleComment = {
+        reply : function (coid) {
+            $('#comment-form input[name=coid]').val(coid);
+            $("html,body").animate({scrollTop: $('div.comment-container').offset().top}, 500);
+            $('#comment-form #textarea').focus();
+        },
+        subComment: function () {
+            $.ajax({
+                type: 'post',
+                url: '/comment',
+                data: $('#comment-form').serialize(),
+                async: false,
+                dataType: 'json',
+                success: function (result) {
+                    $('#comment-form input[name=coid]').val('');
+                    if (result && result.success) {
+                        window.location.reload();
+                    } else {
+                        if (result.msg) {
+                            alert(result.msg);
+                        }
+                    }
+                }
+            });
+            return false;
+        }
+    };
+})();
+function getCommentCookie(name){
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    if(arr=document.cookie.match(reg))
+        return unescape(decodeURI(arr[2]));
+    else
+        return null;
+}
+function addCommentInputValue(){
+    document.getElementById('author').value = getCommentCookie('tale_remember_author');
+    document.getElementById('mail').value = getCommentCookie('tale_remember_mail');
+    document.getElementById('url').value = getCommentCookie('tale_remember_url');
+}
+function setDefaultInputValue(){
+	var authorInput = $('#comment-form input[name=author]');
+	var mailInput = $('#comment-form input[name=mail]');
+	var author = authorInput.val();
+	if(null == author || "" == author){
+		var timestamp=new Date().getTime();
+		authorInput.val("路人" + timestamp);
+	}
+	var mail = mailInput.val();
+	if(null == mail || "" == mail){
+		mailInput.val("user@mail.com.htm"/*tpa=http://www.oyjie.cn/article/user@mail.com*/);
+	}
+}
+addCommentInputValue();
+setDefaultInputValue();
+</script>
+    </div>
+</div>
+<div id="directory-content" class="directory-content">
+    <div id="directory"></div>
+</div>
+<script>
+    $('#directory').html('<a id="openHiddenLinkId" href="javascript:void(0)" isopen="0" style="display:block;float:right;z-index: 2000;">↗</a><p style="text-align: center;padding-bottom: 5px;color: #08c;">目录</p>');
+    var postDirectoryBuild = function() {
+        $("#openHiddenLinkId").click(function(){
+            var isopen = $(this).attr("isopen");
+            if(isopen == "1"){
+              $('#directory').find("p,ul").show(200);
+              $(this).attr("isopen","0").html("↗");
+            }else{
+              $('#directory').find("p,ul").hide(200);
+              $(this).attr("isopen","1").html("↙");
+            }
+        });
+        var postChildren = function children(childNodes, reg) {
+                var result = [],
+                    isReg = typeof reg === 'object',
+                    isStr = typeof reg === 'string',
+                    node, i, len;
+                for (i = 0, len = childNodes.length; i < len; i++) {
+                    node = childNodes[i];
+                    if ((node.nodeType === 1 || node.nodeType === 9) &&
+                        (!reg ||
+                        isReg && reg.test(node.tagName.toLowerCase()) ||
+                        isStr && node.tagName.toLowerCase() === reg)) {
+                        result.push(node);
+                    }
+                }
+                return result;
+            },
+            createPostDirectory = function(article, directory, isDirNum) {
+                var contentArr = [],
+                    titleId = [],
+                    levelArr, root, level,
+                    currentList, list, li, link, i, len;
+                levelArr = (function(article, contentArr, titleId) {
+                    var titleElem = postChildren(article.childNodes, /^h\d$/),
+                        levelArr = [],
+                        lastNum = 1,
+                        lastRevNum = 1,
+                        count = 0,
+                        guid = 1,
+                        id = 'directory' + (Math.random() + '').replace(/\D/, ''),
+                        lastRevNum, num, elem;
+                    while (titleElem.length) {
+                        elem = titleElem.shift();
+                        contentArr.push(elem.innerHTML);
+                        num = +elem.tagName.match(/\d/)[0];
+                        if (num > lastNum) {
+                            levelArr.push(1);
+                            lastRevNum += 1;
+                        } else if (num === lastRevNum ||
+                            num > lastRevNum && num <= lastNum) {
+                            levelArr.push(0);
+                            lastRevNum = lastRevNum;
+                        } else if (num < lastRevNum) {
+                            levelArr.push(num - lastRevNum);
+                            lastRevNum = num;
+                        }
+                        count += levelArr[levelArr.length - 1];
+                        lastNum = num;
+                        elem.id = elem.id || (id + guid++);
+                        titleId.push(elem.id);
+                    }
+                    if (count !== 0 && levelArr[0] === 1) levelArr[0] = 0;
+
+                    return levelArr;
+                })(article, contentArr, titleId);
+                currentList = root = document.createElement('ul');
+                dirNum = [0];
+                for (i = 0, len = levelArr.length; i < len; i++) {
+                    level = levelArr[i];
+                    if (level === 1) {
+                        list = document.createElement('ul');
+                        if (!currentList.lastElementChild) {
+                            currentList.appendChild(document.createElement('li'));
+                        }
+                        currentList.lastElementChild.appendChild(list);
+                        currentList = list;
+                        dirNum.push(0);
+                    } else if (level < 0) {
+                        level *= 2;
+                        while (level++) {
+                            if (level % 2) dirNum.pop();
+                            currentList = currentList.parentNode;
+                        }
+                    }
+                    dirNum[dirNum.length - 1]++;
+                    li = document.createElement('li');
+                    link = document.createElement('a');
+                    link.href = '#' + titleId[i];
+                    link.innerHTML = !isDirNum ? contentArr[i] :
+                        dirNum.join('.') + ' ' + contentArr[i] ;
+                    li.appendChild(link);
+                    currentList.appendChild(li);
+                }
+                directory.appendChild(root);
+            };
+        createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), true);
+    };
+    postDirectoryBuild();
+</script>
+<script src="prism.js" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/js/prism.js"></script>
+<div id="particles"></div>
+<script src="particle.js" tppabs="http://www.oyjie.cn/templates/themes/theme_iiice/static/js/particle.js"></script>
